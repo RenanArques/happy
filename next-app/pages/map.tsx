@@ -1,5 +1,7 @@
 import { FiPlus } from 'react-icons/fi'
 
+const mapboxToken = process.env.REACT_APP_MAPBOX_TOKEN
+
 // react-leaflet components need to be imported into the browser environment
 let Map, TileLayer
 if (process.browser) {
@@ -35,7 +37,7 @@ const OrphanagesMap: React.FC = () => {
         zoom={15}
         style={{ width: '100%', height: '100%' }}
       >
-        <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`} />
+        <TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${mapboxToken}`} />
       </Map>}
 
       <a href="" className={styles.createOrphanage}>
