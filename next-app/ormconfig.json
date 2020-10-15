@@ -1,0 +1,10 @@
+{
+  "type": "sqlite",
+  "database": "./pages/api/database/database.sqlite",
+  "entities": ["./pages/api/models/*.ts"],
+  "migrations": ["./pages/api/database/migrations/*.ts"],
+  "cli": {
+    "entitiesDir": "./pages/api/models",
+    "migrationsDir": "./pages/api/database/migrations"
+  }
+}

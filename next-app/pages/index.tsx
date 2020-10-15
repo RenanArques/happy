@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { FiArrowRight } from 'react-icons/fi'
 
 import styles from '../styles/pages/Home.module.css'
@@ -20,9 +22,11 @@ const Home: React.FC = () => {
           <span>São Paulo</span>
         </div>
 
-        <a href="/map" className={styles.enterApp}>
-          <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
-        </a>
+        <Link href="/map">
+          <div className={styles.enterApp}>
+            <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
+          </div>
+        </Link>
       </div>
     </div>
   )
