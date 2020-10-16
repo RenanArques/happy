@@ -4,7 +4,7 @@ import { FiArrowRight } from 'react-icons/fi'
 
 import styles from '../styles/pages/Home.module.css'
 
-import logoImg from './assets/icon.svg'
+import logoImg from '../assets/icon.svg'
 
 const Home: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const Home: React.FC = () => {
           <span>São Paulo</span>
         </div>
 
-        <Link href="/map">
+        <Link href="/orphanages">
           <div className={styles.enterApp}>
             <FiArrowRight size={26} color="rgba(0, 0, 0, 0.6)" />
           </div>

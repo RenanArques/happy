@@ -1,6 +1,8 @@
 import Head from 'next/head'
 
 import '../styles/globals.css'
+import '../styles/mapPopup.css'
+import 'leaflet/dist/leaflet.css'
 
 import type { AppProps } from 'next/app'
 

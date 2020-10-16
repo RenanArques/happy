@@ -4,7 +4,7 @@ export default {
   render(image: Image) {
     return {
       id: image.id,
-      url: `${process.env.url}${image.path}`
+      url: `${process.env.NEXT_PUBLIC_BASE_URL}${image.path}`
     }
   },
 

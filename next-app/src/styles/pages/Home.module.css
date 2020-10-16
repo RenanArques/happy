@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  background: url('../../pages/assets/hero.svg') no-repeat 80% center;
+  background: url('../../assets/hero.svg') no-repeat 80% center;
 }
 
 #pageLanding .contentWrapper main {

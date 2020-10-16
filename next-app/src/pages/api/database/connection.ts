@@ -45,12 +45,17 @@ export async function ensureConnection(req, res, next) {
     }
   } else {
     req.db = await connectionManager
-      .create({
+      .create(process.env.NODE_ENV === 'production' ? {
+        type: 'postgres',
+        url: process.env.POSTGRES_URL,
+        entities: Object.values(entities),
+        migrations: [path.resolve() + '/src/pages/api/database/migrations'],
+      } : {
         ...await getConnectionOptions(),
         type: 'sqlite',
-        database: path.resolve() + '/pages/api/database/database.sqlite',
+        database: path.resolve() + '/src/pages/api/database/database.sqlite',
         entities: Object.values(entities),
-        migrations: [path.resolve() + '/pages/api/database/migrations'],
+        migrations: [path.resolve() + '/src/pages/api/database/migrations'],
       })
       .connect()
   }
