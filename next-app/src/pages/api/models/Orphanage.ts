@@ -10,10 +10,10 @@ export default class Orphanage {
   @Column('varchar',{ nullable:true })
   name: string;
 
-  @Column('decimal',{ nullable:true })
+  @Column('varchar',{ nullable:true })
   latitude: number;
 
-  @Column('decimal',{ nullable:true })
+  @Column('varchar',{ nullable:true })
   longitude: number;
 
   @Column('varchar',{ nullable:true })
